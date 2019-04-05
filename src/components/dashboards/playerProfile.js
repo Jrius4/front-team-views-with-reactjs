@@ -1,5 +1,6 @@
 import React from 'react'
 import PlayerInfor from './playerInfor'
+import { Link } from 'react-router-dom'
 
 const PlayerProfile = ({ players }) => {
     return (
@@ -8,12 +9,16 @@ const PlayerProfile = ({ players }) => {
                 <div className="col s12 m6 offset-m1 m-5">
                     {players && players.map(player => {
                         return (
+                           
                             <PlayerInfor player={player} key={player.id} />
+                            
                         )
                     })}
                 </div>
             </div>
-        </div>
+        </div> 
+
+        
     )
 }
 

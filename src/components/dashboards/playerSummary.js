@@ -3,28 +3,25 @@ import { connect } from 'react-redux'
 import { deletePlayer } from '../../store/actions/deleteAction'
 
 class PlayerSummary extends Component {
-    state = {
-        name: '',
-        shit: '',
-        nationality: '',
-        date: '',
-        position: '',
-        former_club: ''
-    }
-
+   
+    // componentDidMount() {
+    //     this.props.addPlayer()
+    // }
+    
     handleDelete = (e) => {
         e.preventDefault();
         //console.log('Deleted ooops')
         this.props.deletePlayer(this.state)
     }
     render() {
-        const { player } = this.props;
+      
+            const { player } = this.props;
         return (
             <div className="player-summary section">
                 <table className="highlight">
                 <tbody>
                     <tr>
-                        <td><span className="left m-2">{player.first_name} {player.last_name} </span></td>
+                        <td><span className="left m-2">{player.image} {player.first_name} {player.last_name} </span></td>
                         <td><button className="right m-1">Edit</button></td>
                         <td><button onClick={this.handleDelete} className="right m-1">Delete</button></td>
                     </tr>
@@ -35,9 +32,10 @@ class PlayerSummary extends Component {
     }
 }
 
+
 const mapDispatchTopProps = (dispatch) => {
     return {
-        deletePlayer: (player) => dispatch(deletePlayer(player))
+        deletePlayer: (player) => dispatch(deletePlayer(player)),
     }
 }
 

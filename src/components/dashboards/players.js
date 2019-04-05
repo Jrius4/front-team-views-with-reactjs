@@ -1,5 +1,6 @@
 import React from 'react'
 import PlayerSummary from './playerSummary'
+import { Link } from 'react-router-dom'
 
 const Editplayer = ({ players }) => {
   return (
@@ -9,7 +10,9 @@ const Editplayer = ({ players }) => {
           <div className="col 12 m6">
             {players && players.map(player => {
               return (
+                <Link to={'/player/' + player.id}>
                 <PlayerSummary player={player} key={player.id} />
+                </Link>
               )
             })}
           </div>

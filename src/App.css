@@ -3,17 +3,53 @@
   margin: 0;
 }
 
-.player_form {
+.jumbotron {
+  margin-bottom: 4em;
+  width: 100%;
+  margin-top: 20px
+}
+
+.person-wrapper {
+  margin-bottom: 2em;
+  display: block;
+}
+
+.profile-pic {
+  width: 80%;
+}
+
+.btn-primary {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  background-color: #2892D7;
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+
+.jumbotron .title {
+  font-size: 23.8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* .player_form {
   background: blue;
   padding: 2px;
   margin-top: 30px;
+} */
+
+/* .nav {
+  position: fixed;
+  display: flex;
+} */
+
+Link h3 {
+  color:red;
+  text-decoration: none;
 }
 
-.player-infor,
-.card {
- background: blue;
- margin: auto 55px auto 55px;
-}
 
 /* Banner */
 
@@ -35,8 +71,9 @@
 #banner h3 {
   border-radius: 8px;
   padding: 0 24px;
-  font-size: 24px;
-  letter-spacing: 13px; 
+  font-size: 14px;
+  letter-spacing: 13px;
+  margin-top: 180px; 
 }
 
 #banner h1 {
@@ -69,10 +106,6 @@
   padding: 4px 32px;
 }
 
-.card {
-  width: 400px 
-}
-
 
   .learn_more {
     padding: 8px 24px;
@@ -93,6 +126,7 @@
     padding: 8px 40px 8px 24px;
     color: white;
 }
+
 
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
@@ -117,7 +151,7 @@ textarea.materialize-textarea:focus:not([readonly]){
 
 }
 
-.player-infor {
+/* .player-infor {
   height: 100%;
   width: 400px
-}
+} */

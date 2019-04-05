@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import 'react-router-dom'
 import {
   Collapse,
   Navbar,
@@ -7,12 +8,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Dropdown,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
 } from 'reactstrap';
 
 class Header extends React.Component {
@@ -33,63 +28,34 @@ class Header extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar to='/' color="primary dark-4" expand="md">
+          <NavbarBrand href="/">Logo</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" >
+              <NavItem>
+
+                <NavLink to='/'>HOME</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to='/team'>PLAYERS</NavLink>
+              </NavItem>
+              <NavItem>
+
+                <NavLink to='/'>BLOG</NavLink>
+              </NavItem>
+              <NavItem>
+
+                <NavLink to='/'>NEWS</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
         <div id="banner">
-          <Navbar color="transparent" expand="md">
-            <NavbarBrand href="/">Logo</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar tabs>
-              <Nav className="ml-auto" >
-                <NavItem>
-                  <Link to='/teams'>
-                    <NavLink>HOME</NavLink>
-                  </Link>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav >
-                    PLAYERS
-                </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>
-                      Option 1
-                  </DropdownItem>
-                    <DropdownItem>
-                      Option 2
-                  </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Option 1
-                  </DropdownItem>
-                    <DropdownItem>
-                      Option 2
-                  </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Reset
-                  </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-                <NavItem>
-                  <Link to='/'>
-                    <NavLink to='/'>TRAINING</NavLink>
-                  </Link>
-                </NavItem>
-                <NavItem>
-                  <Link to='/'>
-                    <NavLink to='/'>BLOG</NavLink>
-                  </Link>
-                </NavItem>
-                <NavItem>
-                  <Link to='/'>
-                    <NavLink to='/'>NEWS</NavLink>
-                  </Link>
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
           <h3>WELCOME TO</h3>
           <h1>. POLICE FC .</h1>
           <p>Here you will find everything about Police FC. Pure emotions, latest news, statisctics in details and much more.</p>
-           <button className="learn_more">LEARN MORE</button>
+          <button className="learn_more">LEARN MORE</button>
         </div>
       </React.Fragment>
     );

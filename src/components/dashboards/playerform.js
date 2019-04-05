@@ -14,6 +14,10 @@ class PlayerForm extends Component {
         image: ''
     }
 
+    componentDidMount() {
+        this.props.addPlayer()
+    }
+
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
@@ -21,12 +25,12 @@ class PlayerForm extends Component {
     }
 
     handleSubmit = (e) => {
-        // e.preventDefault();
-        // console.log(this.state);
+        e.preventDefault();
         this.props.addPlayer(this.state)
     }
 
     render() {
+        console.log('this.props', this.props)
         return (
             <div className="player_form section">
                 <div className="card z-depth-0">

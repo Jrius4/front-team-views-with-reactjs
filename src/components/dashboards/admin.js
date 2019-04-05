@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PlayerForm from './playerform'
-import Editplayer from '../team/players';
-import { firestoreConnect } from 'react-redux-firebase'
-import { compose } from 'redux'
+import Editplayer from './players';
 
 class Admin extends Component {
     render() {
@@ -25,14 +23,9 @@ class Admin extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    // console.log(state);
     return {
-        players: state.firestore.ordered.players
+        players: state.player.players
     }
 }
-export default compose(
-    connect(mapStateToProps),
-    firestoreConnect ([
-        { collection: 'players' }
-    ])
-)(Admin);
+export default connect(mapStateToProps)(Admin);

@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deletePlayer } from '../../store/actions/deleteAction'
+import { deletePlayer, getPlayer } from '../../store/actions/playerActions'
 
 class PlayerSummary extends Component {
+    state ={
+        first_name: '',
+        last_name: '',
+    }
    
-    // componentDidMount() {
-    //     this.props.addPlayer()
-    // }
+    componentDidMount() {
+        this.props.getPlayer()
+    }
     
     handleDelete = (e) => {
         e.preventDefault();
-        //console.log('Deleted ooops')
-        this.props.deletePlayer(this.state)
+        this.props.getPlayer(this.state)
     }
     render() {
       
@@ -32,11 +35,17 @@ class PlayerSummary extends Component {
     }
 }
 
+const mapStateTopProps = (state) => {
+    return {
+        players: state.player
+    }
+}
 
 const mapDispatchTopProps = (dispatch) => {
     return {
+        getPlayer: (player) => dispatch(getPlayer(player)),
         deletePlayer: (player) => dispatch(deletePlayer(player)),
     }
 }
 
-export default connect(null, mapDispatchTopProps)(PlayerSummary);
+export default connect(mapStateTopProps, mapDispatchTopProps)(PlayerSummary);

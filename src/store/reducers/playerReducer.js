@@ -1,4 +1,4 @@
-import { ADD_PLAYERS } from '../actions/playerActions'
+import { ADD_PLAYERS, GET_PLAYERS, DELETE_PLAYERS } from '../actions/playerActions'
 
 const initState = {
     players: [
@@ -9,8 +9,14 @@ const initState = {
 export default (state = initState, action) => {
     switch (action.type) {
         case ADD_PLAYERS:
-        return ('create player', action.player);
-        default: 
+            console.log('create player', action.player);
+            return state;
+        case GET_PLAYERS:
+            return [state, action.players]
+        case DELETE_PLAYERS:
+            console.log('deleted player', action)
+            return state;
+        default:
             return state
     }
 }

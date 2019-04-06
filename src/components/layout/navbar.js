@@ -28,7 +28,7 @@ class Header extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar to='/' color="primary dark-4" expand="md">
+        <Navbar to='/' color="primary" expand="md">
           <NavbarBrand href="/">Logo</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -51,12 +51,6 @@ class Header extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <div id="banner">
-          <h3>WELCOME TO</h3>
-          <h1>. POLICE FC .</h1>
-          <p>Here you will find everything about Police FC. Pure emotions, latest news, statisctics in details and much more.</p>
-          <button className="learn_more">LEARN MORE</button>
-        </div>
       </React.Fragment>
     );
   }

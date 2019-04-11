@@ -1,23 +1,64 @@
 .App {
   text-align: center;
   margin: 0;
-  background: url('components/img/3.png')
+  /* background: url('components/img/3.png'), */
+  background: url('components/img/3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 .jumbotron {
   margin-bottom: 4em;
   width: 100%;
   margin-top: 20px;
-  background: rgba(0, 0, 0, 0.2) ;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.jumb {
+  background: url('components/img/3.png');
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+/* .about {
+  background: url('components/img/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover
+} */
+
+.about-pic {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  display: flex;
 }
 
 .person-wrapper {
-  margin-bottom: 5em;
-  margin-top: 5em;
+  margin-bottom: 0;
+  margin-top: 0;
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 17px;
   text-align: center;
+}
+
+.logo-pic {
+  width: 70px;
+  height: 75px;
+}
+
+.team-logo {
+  display: flex;
+  padding: 3em
+}
+
+.team-logo h5 {
+  margin: 1em 4em 1em 4em
+}
+
+.row {
+  align-items: center
 }
 
 .infor{
@@ -28,7 +69,6 @@
   font-size: 18px;
   text-align: left;
   margin-left: 4em;
- 
 }
 
 .infor ul li {
@@ -37,21 +77,21 @@
 }
 
 .infor 
-.card {
+.section {
  margin-top: 3em;
  z-index: 0;
 }
 
 .infor 
-.card 
-.card-title{
- text-align: center;
+.section
+.section-title{
+ text-align: right;
  font-size: 20px;
  font-weight: 600;
 }
 
 .infor 
-.card p {
+.section p {
  font-size: 16px;
  padding: 2px;
  margin-top: 1em;
@@ -77,6 +117,47 @@ h3 {
   font-size: 23.8px;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.veiw-players h5{
+  color: black;
+  text-decoration: none
+}
+
+
+.fixture-list ul li {
+  list-style-type: none;
+  text-decoration: none;
+  margin-bottom: 12px;
+  color: black;
+  font-size: 12px;
+  display: flex;
+}
+
+.fixture-logo {
+  width: 50px;
+  display: inline;
+}
+
+.fixture-list ul li:hover {
+  list-style-type: none;
+  background-color: #7fffd4ac;
+  padding: 5px;
+  color: #181515;
+}
+.fixture-list a {
+  color: black;
+}
+.fixture-list {
+  font-size: 10px;
+}
+
+.fixture-list ul li:active {
+  color: black;
+}
+
+/* .veiw-players Link:hover{
+  text-decoration: none;
+} */
 
 /* .player_form {
   background: blue;
@@ -165,7 +246,7 @@ Link h3 {
   }
 
   .learn_more:hover {
-    background: rgba(231, 7, 231, 0.603);
+    background: rgba(241, 241, 241, 0.979);
     text-decoration: none;
     color: white;
 }

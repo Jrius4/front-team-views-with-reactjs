@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import { Row, Col, Image, Container } from 'react-bootstrap'
 import img1 from '../img/4.jpg'
 
-
 const PlayerInfor = theme => ({
   root: {
     ...theme.mixins.gutters(),
@@ -51,8 +50,7 @@ function PaperSheet(props) {
                            Former Club :
                        </li>
                    </ul>
-                   <div className="card z-depth-0">
-                   <span className="card-title">Blog</span>
+                   <div className="section">
                    <p> Permanent member clubs include FC Basel 1893, SV Werder Bremen, Bayer 04 Leverkusen,
                   FK Austria Wien and Queens Park Rangers F.C. Our main mission is the Young Coach Education</p>
                   </div>

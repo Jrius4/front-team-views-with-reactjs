@@ -4,21 +4,22 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
+import getPlayer from '../../store/actions/playerActions'
 import { Row, Col, Image, Container } from 'react-bootstrap'
 import img1 from '../img/6.jpg'
-
+import img2 from '../img/5.jpg'
+import img3 from '../img/4.jpg'
 
 const AllPlayers = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
+    paddingTop: theme.spacing.unit * 0,
+    paddingBottom: theme.spacing.unit * 0,
   },
 });
 
 function PaperSheet(props) {
   const { classes } = props;
-
   return (
     <div>
       <Paper className={classes.root} elevation={1}>
@@ -30,63 +31,164 @@ function PaperSheet(props) {
               </Col>
             </Row>
             <Row className="show-grid text-center">
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
-                </Link>
-                <p>Summary Information about Kato</p>
+              <Col xs={12} sm={4} className="person-wrapper">
+              
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+            <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              
+              </Col>
+              </Row>
+              <Row className="show-grid text-center">
               <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
-                </Link>
-                <p>Summary Information about Kato</p>
+              
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+            <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img3} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
-              <Col xs={12} sm={3} className="person-wrapper">
-                <Image src={img1} circle className="profile-pic" />
-                <Link to='/player'>
-                  <h3>Kato Moni</h3>
+              <Col xs={12} sm={2} className="person-wrapper">
+              
+              </Col>
+              </Row>
+              <Row className="show-grid text-center">
+              <Col xs={12} sm={2} className="person-wrapper">
+              
+              </Col>
+            <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
                 </Link>
-                <p>Summary Information about Kato</p>
+                  <h6>Kato Moni</h6>
               </Col>
-            </Row>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img3} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={1} className="person-wrapper">
+              
+              </Col>
+              </Row>
+              <Row className="show-grid text-center">
+              <Col xs={12} sm={1} className="person-wrapper">
+              
+              </Col>
+            <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img3} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={1} className="person-wrapper">
+              
+              </Col>
+              </Row>
+            <Row className="show-grid text-center">
+            <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img3} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img1} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img2} className="profile-pic" />
+                </Link>
+                  <h6>Kato Moni</h6>
+              </Col>
+              <Col xs={12} sm={2} className="person-wrapper">
+              <Link to='/player/{id}'>
+                <Image src={img3} className="profile-pic" />
+                </Link>
+                <hr />
+                  <h6>Kato Moni</h6>
+              </Col>
+              </Row>
+          
+          
+              
+          
           </Container>
         </Typography>
       </Paper>

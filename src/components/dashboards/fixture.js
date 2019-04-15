@@ -1,4 +1,7 @@
 import React from 'react'
+import { Row, Col, Image } from 'react-bootstrap'
+import logo from '../img/logo.jpg';
+import startimesbadge from '../img/startimesbadge.jpg';
 // import { Link } from 'react-router-dom'
 
 const Fixtures = () => {

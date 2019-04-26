@@ -4,6 +4,8 @@ import { Row, Col, Image, Container } from 'react-bootstrap'
 import img1 from '../img/4.jpg'
 import img2 from '../img/5.jpg'
 import img3 from '../img/6.jpg'
+import img4 from '../../../src/assests/images/1.jpg';
+
 
 const HomeSummary = () => {
   return (
@@ -53,15 +55,17 @@ const HomeSummary = () => {
       </Row>
     
       <Row className="text-left">
-      <span className="card-title">Posts</span>
-        <Col xs={12} sm={7} className="section">
-        <div className="card">
-        <div className="card-image">
-        <img src={img3} alt=""></img>
+      <h2 className="card-title text-center">From Our Blog</h2>
+      <hr/>
+        <Col lg={12} ms={8} xs={12} sm={7} className="section">
+        <div className="card shadow-sm">
+        <div className="card-image" style={{width:"100%"}}>
+        <img src={img4} alt="" className="image-fluid h-75 w-100" />
         </div>
         <div className="card-news">
+        <p className="lead text-left py-2" style={{textAlign:'justify'}}>
         FK Austria Wien and Queens Park Rangers F.C. Our main mission is the Young Coach Education
-        Program in which the clubs' instructors empower
+        Program in which the clubs' instructors empower</p>
         </div>
         </div>
         </Col>
